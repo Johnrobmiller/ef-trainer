@@ -1,3 +1,25 @@
+Here are the installs you'll need:
+
+Start with this command to make the base app
+
+--> npx create-next-app dir
+
+Then, the rest can be installed in any order.
+
+--> yarn add --dev typescript @types/react @types/node
+
+--> npm i -D tailwindcss@latest postcss@latest autoprefixer@latest
+
+After that, go ahead and replace your project files with this repository (while keeping the node_modules and .next folders, of course.) 
+
+This is a very minimal template of a "create-next-app" bootstrap with tailwind and typescript.  Everything works out of the box.
+
+Happy coding!!!
+
+(Below this line is the original README.md created using "create-next-app")
+
+-----------------------------------------
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

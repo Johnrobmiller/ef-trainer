@@ -1,16 +1,49 @@
-html,
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat/Montserrat-Regular.ttf');
+  font-weight: 500;
+} @font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat/Montserrat-Bold.ttf');
+  font-weight: 700;
+} @font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat/Montserrat-ExtraBold.ttf');
+  font-weight: 800;
+} @font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat/Montserrat-Black.ttf');
+  font-weight: 900;
+} 
+
+@layer utilities {
+
+  .text-border-3 {
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: black;
+  }
+  .text-border-2 {
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+  }
+  .text-border-1 {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+  }
+
+  @variants hover {
+    .text-border-0 {
+      -webkit-text-stroke-width: 0px;
+    }
+  }
+}
+
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
+  @apply bg-lightest;
+  font-family: 'Montserrat', sans-serif;
+  overflow: hidden;
 }
