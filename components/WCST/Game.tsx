@@ -180,10 +180,7 @@ export default function Game() {
           color={playerCard.color}
           startText={startText}
           clickedOnStart={clickedOnStart}/>
-          
-        <div className=' absolute text-b text-y'></div>
-        {/* This is so that the PurgeCss searcher can find these classes, which are otherwise only created dynamically */}
-        
+                  
       </div>
     </div>
   )

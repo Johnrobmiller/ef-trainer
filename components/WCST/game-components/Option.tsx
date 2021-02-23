@@ -4,7 +4,6 @@ import NewCard from './svg-components/NewCard'
 
 function Option ({ optionProps }: { optionProps: OptionProps }) {
 
-  const textColor: string = 'text-' + optionProps.card.color[0].toLowerCase()
   let headerText: string
   switch (optionProps.cardId) {
     case 1: headerText = 'WISCONSIN'; break
@@ -13,9 +12,16 @@ function Option ({ optionProps }: { optionProps: OptionProps }) {
     case 4: headerText = 'TASK'; break
   }
 
+  const color: string = optionProps.card.color[0].toLowerCase()
+
   return (
     <div className='w-80'>
-      <h1 className={`text-5xl font-black tracking-widest mb-8 text-border-3 ${textColor} flex justify-center`}>{headerText!}</h1>
+
+      {/* Tailwind didn't accept the use of anonymous functions in my template literal.
+      Is there a way to get them to work? */}
+      <h1 className={`text-5xl font-black tracking-widest mb-8 text-border-3 flex justify-center ${
+        color === 'g' ? 'text-g' : color === 'b' ? 'text-b' : color === 'r' ? 'text-r' : 'text-y'
+      }`}>{headerText!}</h1>
 
       <NewCard optionProps={optionProps} isPlayerCard={false} />
       
